@@ -15,4 +15,9 @@ class Booking extends Model
     {
         return $this->hasMany(BookingDetail::class, 'BookingID');
     }
+
+    function coupon()
+    {
+        return $this->belongsTo(Coupon::class, 'CouponID');
+    }
 }
